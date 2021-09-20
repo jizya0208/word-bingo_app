@@ -20,10 +20,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		int bingo = 0;
-		//標準入力でビンゴの行列数を決定
+		//　ビンゴの行列を決定
         Scanner sc = new Scanner(System.in);
         int size = inputInteger(sc, value ->  1000 >= value && value >= 3);
-		//2次元配列の宣言
+        //　2次元配列の宣言
 		String [][] sheetWords = new String[size][size];
 		for (int n = 0; n < size; n++) {
 			Scanner inputWord = new Scanner(System.in);
@@ -32,7 +32,7 @@ public class Main {
 				sheetWords[n][m] = words[m];
 			}
 		}
- 		//縦横斜めの列を抽出
+ 		//　縦横斜めの列を抽出。縦横の列は複数存在するが、突合時まで使わないので一旦Mapに格納する
 		HashMap<Integer, ArrayList<String>> rowLines = new HashMap<>();
 		HashMap<Integer, ArrayList<String>> colLines = new HashMap<>();
 		ArrayList<String> rowWords = new ArrayList<>();
