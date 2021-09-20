@@ -1,2 +1,0 @@
-module word_bingo {
-}
